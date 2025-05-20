@@ -6,27 +6,68 @@ body{
     border-radius: 30px;
     width: 100%;
 }
+.barra-rosa {
+    background-color: #f7cce8; /* Un rosa claro, como el del logo */
+    height: 50px; /* Puedes ajustarlo a tu gusto */
+    width: 100%;
+}
 
 header{
-    background: #f0b3ee;
+    background: #ffffff;
     color: #120202;
     padding: 20px 0;
     text-align: center;
 }
 
-nav ul {
-list-style: none;
-padding: 0;
+
+/* Barra superior delgada rosa */
+.barra-rosa {
+    background-color: #f7cce8;
+    height: 30px;
 }
 
-nav ul li{
+/* Logo centrado */
+.logo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.barra-menu-rosa {
+    background-color: #f7cce8;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    width: fit-content;       /* Solo ocupa lo necesario */
+    margin: 0 auto;           /* La centra en la página */
+    border-radius: 10px;      /* (Opcional) para bordes redondeados */
+}
+
+
+/* Menú */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.menu li {
     display: inline;
-    margin: 0 10px;
 }
 
-nav ul li a {
-    color: #fff;
+.menu a {
     text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+.TEXTO{
+    color: rgb(15, 14, 15);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 #about{
@@ -36,6 +77,8 @@ nav ul li a {
 
 #about h2{
     margin-top: 0;
+    color: pink
+    
 }
 
 .gallery{
@@ -59,7 +102,8 @@ nav ul li a {
 }
 
 .tabla{
-    background-color: #fbb8f8;
+    background-color: #0000009a;
+
 }
 
 
@@ -69,19 +113,19 @@ nav ul li a {
 }
 
 .partefinal{
-    background-color: rgb(232, 207, 211);
-    margin-top: 20px;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 25px;
+    background-color: #ffdcdc;
+    padding: 30px;
+    border-radius: 20px;
+    width: 60%; /* Cambiado de 60% a 40% */
+    margin: 10px auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 button{
     margin-top: 20px;
     width: 100%;
     padding: 12px;
-    background-color: #e8a7d0;
+    background-color: #f182c8;
     color: #f4f4f4;
     font-weight: bold;
     border: none;
@@ -95,27 +139,23 @@ button:hover{
     background-color: #333;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-}
-
-form label{
-    margin-bottom: 2px;
-}
-
-form input, form textarea{
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-}
-
-form input[type="submit"]{
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
+form {
+    height: auto; /* ajusta al contenido, o define un alto específico */
+    padding: 10px 0; /* menos espacio vertical */
+  }
+  
+input, textarea {
+    margin-bottom: 10px; /* reduce espacio entre campos */
+    height: 30px; /* opcional: reducir altura de los campos */
+  }
+  
+textarea {
+    height: 60px; /* opcional: más compacto */
+  }
+  
+button {
+    padding: 8px 20px; /* menos espacio vertical */
+  }
 
 @media(max-width:  600px) {
     nav ul {
@@ -163,7 +203,57 @@ form input[type="submit"]{
 
 html { scroll-behavior: smooth; }
 
+/* CSS */
+.productos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
+
+
+.producto {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+  }
+  
+  .producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .producto:hover img {
+    transform: scale(1.1);
+  }
+  
+  .texto-superior {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  .texto-superior h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .texto-superior a {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
 .wrapper {
 	max-width: 1300px;
 	margin: 0 auto;
@@ -201,6 +291,10 @@ html { scroll-behavior: smooth; }
 	width: 100%;
 	display: inline-block;
 	position: relative;
+}
+
+.LOGO{
+    width: 30%;
 }
 
 .caption {
@@ -259,6 +353,11 @@ html { scroll-behavior: smooth; }
 		bottom: 96px;
 		right: 50px;
 	}
+}
+
+
+.mapa-container {
+    margin-top: 30px;
 }
 
 .social-media {
