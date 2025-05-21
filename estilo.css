@@ -1,228 +1,152 @@
-body{
+/* LIMPIEZA Y ORDENACIÓN DE CSS */
+
+/* RESET Y GENERALES */
+* {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 30px;
     border-radius: 30px;
     width: 100%;
-}
-.barra-rosa {
-    background-color: #f7cce8; /* Un rosa claro, como el del logo */
-    height: 50px; /* Puedes ajustarlo a tu gusto */
+  }
+  
+  /* ENCABEZADO */
+  .barra-rosa {
+    background-color: #f7cce8;
+    height: 30px;
     width: 100%;
-}
-
-header{
+  }
+  
+  header {
     background: #ffffff;
     color: #120202;
     padding: 20px 0;
     text-align: center;
-}
-
-
-/* Barra superior delgada rosa */
-.barra-rosa {
-    background-color: #f7cce8;
-    height: 30px;
-}
-
-/* Logo centrado */
-.logo {
+  }
+  
+  .logo {
     text-align: center;
     margin: 20px 0;
-}
-
-.barra-menu-rosa {
+  }
+  
+  /* MENÚ */
+  .barra-menu-rosa {
     background-color: #f7cce8;
     position: sticky;
     top: 0;
     z-index: 999;
     padding: 10px 20px;
-    width: fit-content;       /* Solo ocupa lo necesario */
-    margin: 0 auto;           /* La centra en la página */
-    border-radius: 10px;      /* (Opcional) para bordes redondeados */
-}
-
-
-/* Menú */
-.menu ul {
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  
+  .menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     gap: 40px;
-}
-
-.menu li {
+  }
+  
+  .menu li {
     display: inline;
-}
-
-.menu a {
+  }
+  
+  .menu a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-
-
-.TEXTO{
-    color: rgb(15, 14, 15);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-#about{
-    padding: 20px;
-    background: #f4f4f4;
-}
-
-#about h2{
-    margin-top: 0;
-    color: pink
-    
-}
-
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.project {
-    width: 300px;
-    padding: 10px;
-    background: #fff;
-    border: 1px solid darkgoldenrod;
-    text-align: center;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-}
-
-.tabla{
-    background-color: #0000009a;
-
-}
-
-
-#contact {
-    padding: 10px;
-    text-decoration: none;
-}
-
-.partefinal{
-    background-color: #ffdcdc;
-    padding: 30px;
-    border-radius: 20px;
-    width: 60%; /* Cambiado de 60% a 40% */
-    margin: 10px auto;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
-}
-
-button{
-    margin-top: 20px;
-    width: 100%;
-    padding: 12px;
-    background-color: #f182c8;
-    color: #f4f4f4;
-    font-weight: bold;
-    border: none;
-    border-radius: 25px;
-    cursor:pointer;
-    font-size: 16px;
-}
-
-
-button:hover{
-    background-color: #333;
-}
-
-form {
-    height: auto; /* ajusta al contenido, o define un alto específico */
-    padding: 10px 0; /* menos espacio vertical */
   }
   
-input, textarea {
-    margin-bottom: 10px; /* reduce espacio entre campos */
-    height: 30px; /* opcional: reducir altura de los campos */
-  }
-  
-textarea {
-    height: 60px; /* opcional: más compacto */
-  }
-  
-button {
-    padding: 8px 20px; /* menos espacio vertical */
-  }
-
-@media(max-width:  600px) {
+  @media (max-width: 600px) {
     nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
+      flex-direction: column;
+      align-items: center;
     }
     .gallery{
         flex-direction: column;
         align-items: center;
     }
-}
+  }
+  
+  /* TEXTO Y SECCIONES */
+  .barra-estilo {
+    background-color: #f9c4d2; /* rosa suave */
+    padding: 10px 20px;
+    margin: 20px auto;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .TEXTO {
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: auto;
+    text-align:  center;
+  }
+  
+  #about {
+    padding: 20px;
+    background: #f4f4f4;
+  }
+  
+  #about h2 {
+    margin-top: 0;
+    color: pink;
+  }
+  
+  #contact {
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .rosa{
+    background-image: url("fondo.jpg");
+    background-size: cover;        /* Escala la imagen para que cubra todo sin deformarse */
+    background-repeat: no-repeat;  /* Evita que se repita */
+    background-position: center;   /* Centra la imagen */
+    background-attachment: fixed;  /* Opcional: mantiene la imagen fija al hacer scroll */
+  }
 
-@media (hover: hover) {
-    a:hover {
-    background: rgb(230, 195, 228);
-}
-}
-
-
-/*IMAGENES CORREDIZAS*/
-
-@keyframes slide {
-	0% { transform: translateX(0); }
-	10% { transform: translateX(0); }
-
-	15% { transform: translateX(-100%); }
-	30% { transform: translateX(-100%); }
-
-	35% { transform: translateX(-200%); }
-	50% { transform: translateX(-200%); }
-
-	55% { transform: translateX(-300%); }
-	70% { transform: translateX(-300%); }
-
-	75% { transform: translateX(-400%); }
-	90% { transform: translateX(-400%); }
-
-	95% { transform: translateX(-500%); }
-	100% { transform: translateX(-500%); }
-}
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-/* CSS */
-.productos-container {
+  /* GALERÍA Y PROYECTOS */
+  .gallery,
+  .productos-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
-}
-
-
-
-.producto {
+    justify-content: center;
+  }
+  
+  .project{
+    width: 300px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid darkgoldenrod;
+    text-align: center;
+  }
+  .producto {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
     width: 300px;
     height: 400px;
-    text-align: center;
   }
-  
+  .project img{
+    max-width: 100%;
+    height: auto;
+  }
+
   .producto img {
     width: 100%;
     height: 100%;
@@ -233,7 +157,7 @@ html { scroll-behavior: smooth; }
   .producto:hover img {
     transform: scale(1.1);
   }
-  
+
   .texto-superior {
     position: absolute;
     bottom: 20px;
@@ -248,133 +172,194 @@ html { scroll-behavior: smooth; }
     margin: 0;
   }
   
-  .texto-superior a {
-    color: white;
-    text-decoration: underline;
-    font-weight: bold;
+ .texto-superior a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+  
+  /* SLIDER */
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
   
-.wrapper {
-	max-width: 1300px;
-	margin: 0 auto;
-}
-
-.slider {
-	position: relative;
-}
-
-.slides {
-	position: relative;
-	display: flex;
-	overflow: hidden;
-}
-
-.slide {
-	width: 100vw;
-	flex-shrink: 0;
-	animation-name: slide;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-
-/*.slides:hover .slide {
-	animation-play-state: paused;
-}*/
-
-.slide img {
-	width: 100%;
-	vertical-align: top;
-}
-
-.slide a {
-	width: 100%;
-	display: inline-block;
-	position: relative;
-}
-
-.LOGO{
-    width: 30%;
-}
-
-.caption {
-	color: white;
-	text-shadow: 1px 1px black;
-	font-size: 10px;
+  .slider {
+    width: 100%;
+    max-width: 1300px;
+    height: 600px;
+    margin: 40px auto;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    /* Si tienes animación automática puedes agregar aquí */
+  }
+  
+  .slide {
+    min-width: 100%; /* Se asegura que cada slide ocupe el 100% del slider */
+    height: 100%;
+    flex-shrink: 0;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+  }
+  
+  .slides {
+    animation: slide 15s infinite ease-in-out;
+  }  
+  
+  .slide a {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+  
+  .caption {
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 10px;
     font-style: normal;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	position: absolute;
-	bottom: 8vw;
-	right: 4vw;
+    position: absolute;
+    bottom: 8vw;
+    right: 4vw;
+  }
+  
+  @keyframes slide {
+	0% { transform: translateX(0); } /* Muestra la primera imagen */
+    10% { transform: translateX(0); } /* Mantiene la primera imagen visible */
+
+    33% { transform: translateX(-100%); } /* Cambia a la segunda imagen */
+    43% { transform: translateX(-100%); } /* Mantiene la segunda imagen visible */
+
+    66% { transform: translateX(-200%); } /* Cambia a la tercera imagen */
+    76% { transform: translateX(-200%); } /* Mantiene la tercera imagen visible */
+
+    100% { transform: translateX(0); } /* Regresa a la primera imagen */
 }
+  
+  .slider-controler {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 5px;
+    z-index: 100;
+  }
+  
+  .slider-controler li {
+    margin: 0 0.5rem;
+    display: inline-block;
+  }
+  
+  .slider-controler a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .slide {
+      width: 600px;
+    }
 
-.slide:target {
-	animation-name: none;
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 50;
-}
-
-.slider-controler {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	text-align: center;
-	padding: 5px;
-	/*background-color: rgba(0,0,0,0.5);*/
-	z-index: 100;
-}
-
-.slider-controler li {
-	margin: 0 0.5rem;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.slider-controler a {
-	display: inline-block;
-	vertical-align: top;
-	text-decoration: none;
-	color: white;
-	font-size: 1.5rem;
-}
-
-@media only screen and (min-width: 600px) {
-	.slide {
-		width: 600px;
-	}
-
-	.caption {
-		font-size: 96px;
-		bottom: 96px;
-		right: 50px;
-	}
-}
-
-
-.mapa-container {
-    margin-top: 30px;
-}
-
-.social-media {
+ @media (hover: hover) {
+        a:hover {
+        background: rgb(230, 195, 228);
+    }
+    }
+  
+    .caption {
+      font-size: 96px;
+      bottom: 96px;
+      right: 50px;
+    }
+  }
+  
+  /* FORMULARIO Y PIE */
+  .partefinal {
+    background-color: #ffdcdc;
+    padding: 30px;
+    border-radius: 20px;
+    width: 60%;
+    margin: 10px auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    padding: 10px 0;
+  }
+  
+  input, textarea {
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100%;
+  }
+  
+  textarea {
+    height: 60px;
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #f182c8;
+    color: #f4f4f4;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
+  
+  /* PIE DE PÁGINA */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .social-media {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 15px;
-}
-
-.social-media a {
+  }
+  
+  .social-media a {
     color: #000000;
-    text-decoration: none;}
-
-.TITULOPRINCIPAL{
-    .poetsen-one-regular {
-        font-family: "Poetsen One", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-}
+    text-decoration: none;
+  }
+  
+  /* FUENTE PERSONALIZADA */
+  .TITULOPRINCIPAL {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
